@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base resets & custom animations */
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animated visual breathing scanner overlay active state */
+@keyframes scanning {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(100%); opacity: 0.2; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+.scanner-line {
+  animation: scanning 2.5s infinite ease-in-out;
+}
+
+@keyframes leafpulse {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.05); opacity: 0.3; }
+}
+
+.leaf-bg-glow {
+  animation: leafpulse 4s infinite ease-in-out;
+}

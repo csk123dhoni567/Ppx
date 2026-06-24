@@ -1,0 +1,11 @@
+{
+  "name": "Crop Disease Detection",
+  "description": "A friendly and easy to use AI-powered agriculture app for automated crop disease detection, monitoring, and expert recommendations.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
